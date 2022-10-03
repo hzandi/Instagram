@@ -1,0 +1,44 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: instagram-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/instagram
+    username: postgres
+    password: hzandi1989
+
+
+  jpa:
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+app:
+  cors:
+    allowed-origins: http://localhost:3000
+
+
+minio:
+  bucket:
+    name: epm
+  default:
+    folder: "/"
+  access:
+    name: minioadmin
+    secret: minioadmin
+
+  url: http://127.0.0.1:9000
+
+
+
+
+
+
+
+
+
